@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partido Libertad Y República - Afiliate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Partido Libertad Y República</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#principios" class="nav-link">Principios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#donaciones" class="nav-link">Donaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#afiliate" class="nav-link active">Afiliate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#fiscalizar" class="nav-link">¿Querés fiscalizar?</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">La Libertad <strong>Importa</strong></h1>
+                <p class="hero-description">
+                    Como liberales-libertarios nos oponemos firmemente a cualquier interferencia del gobierno en las decisiones personales, familiares y comerciales. Esencialmente, creemos que todo paraguayo debería ser libre de vivir su vida y perseguir sus intereses como mejor les parezca, siempre y cuando no dañen a otros.
+                </p>
+                <a href="#afiliate" class="cta-button">Afiliate Ahora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Afiliate Section -->
+    <section id="afiliate" class="afiliate-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Formulario de Afiliación</h2>
+                <p>Únete a la lucha por la libertad en Paraguay</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="afiliateForm" class="afiliate-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nacionalidad">Nacionalidad</label>
+                            <input type="text" id="nacionalidad" name="nacionalidad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cedula">Cédula</label>
+                            <input type="text" id="cedula" name="cedula" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lugarNacimiento">Lugar de Nacimiento</label>
+                            <input type="text" id="lugarNacimiento" name="lugarNacimiento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Número de teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="estadoCivil">Estado civil</label>
+                            <select id="estadoCivil" name="estadoCivil" required>
+                                <option value="">Seleccionar estado civil</option>
+                                <option value="soltero">Soltero/a</option>
+                                <option value="casado">Casado/a</option>
+                                <option value="divorciado">Divorciado/a</option>
+                                <option value="viudo">Viudo/a</option>
+                                <option value="union">Unión libre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="profesion">Profesión u Oficio</label>
+                            <input type="text" id="profesion" name="profesion" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad de Residencia</label>
+                            <input type="text" id="ciudad" name="ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="barrio">Barrio</label>
+                            <input type="text" id="barrio" name="barrio" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="cedulaFoto">Adjunta la foto de tu cédula</label>
+                        <div class="file-upload">
+                            <input type="file" id="cedulaFoto" name="cedulaFoto" accept="image/*" required>
+                            <div class="file-upload-content">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Arrastra tu archivo aquí o <span class="browse-text">Abrir Archivos</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Partido Libertad Y República</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
