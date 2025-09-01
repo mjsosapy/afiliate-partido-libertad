@@ -79,6 +79,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Validación para radio buttons
+    const radioButtons = form.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function() {
+            // Validar el grupo de radio buttons
+            const name = this.name;
+            const radioGroup = form.querySelectorAll(`input[name="${name}"]`);
+            let selected = false;
+            
+            radioGroup.forEach(rb => {
+                if (rb.checked) {
+                    selected = true;
+                }
+            });
+            
+            if (selected) {
+                // Remover errores de todos los radio buttons del grupo
+                radioGroup.forEach(rb => {
+                    rb.classList.remove('error');
+                    ocultarError(rb);
+                });
+            }
+        });
+    });
+
     function validarCampo(campo) {
         const valor = campo.value.trim();
         let esValido = true;
@@ -111,6 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!validarFechaNacimiento(valor)) {
                     esValido = false;
                     mensaje = 'Debe ser mayor de 18 años';
+                }
+                break;
+            case 'aceptacionDescuento':
+                if (!valor) {
+                    esValido = false;
+                    mensaje = 'Debe seleccionar una opción';
                 }
                 break;
             default:
